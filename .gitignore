@@ -1,0 +1,7 @@
+**/__pycache__/
+
+.idea
+.env
+/instance
+/migrations/
+/app/attachments/all/

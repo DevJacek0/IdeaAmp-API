@@ -1,0 +1,2182 @@
+{
+	"info": {
+		"_postman_id": "11199840-9e22-4026-9a50-9af7ee006e36",
+		"name": "OST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33246679"
+	},
+	"item": [
+		{
+			"name": "Audit Logs",
+			"item": [
+				{
+					"name": "Get All Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/logs/get-all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logs",
+								"get-all"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "action",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "user_id",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Backup",
+			"item": [
+				{
+					"name": "Create Backup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/backup/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"backup",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cars",
+			"item": [
+				{
+					"name": "Create Car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"plate\": \"\",\r\n  \"name\": \"\",\r\n  \"battery_capacity\": 0,\r\n  \"max_charging_power\": 0,\r\n  \"connector_type\": \"\",\r\n  \"year\": 2000,\r\n  \"country_code\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cars/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cars/get-all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Own Cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cars/get/self",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars",
+								"get",
+								"self"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cars/get/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Car Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cars/1/image",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars",
+								"1",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Car",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"plate\": \"\",\r\n  \"name\": \"\",\r\n  \"battery_capacity\": 0,\r\n  \"max_charging_power\": 0,\r\n  \"connector_type\": \"\",\r\n  \"year\": 2000,\r\n  \"country_code\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cars/update/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cars/delete/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cars",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chargings",
+			"item": [
+				{
+					"name": "Scan QR Code",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"qr_token\": \"\",\r\n    \"station_id\": 1,\r\n    \"port_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/station/scan-qr",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"station",
+								"scan-qr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stop Charging",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"session_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/charging/stop",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"charging",
+								"stop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Charging Session Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/charging/status/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"charging",
+								"status",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Last Charging Session",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/charging/last",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"charging",
+								"last"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Discounts",
+			"item": [
+				{
+					"name": "Apply Discount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 100,\r\n    \"code\": \"Test20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/discounts/apply",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"discounts",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Discount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"Test20\",\r\n    \"value\": 20,\r\n    \"expiry_on\": 0,\r\n    \"max_uses\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/discounts/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"discounts",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Discounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/discounts/get-all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"discounts",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Discount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/discounts/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"discounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Discount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"Test40\",\r\n    \"value\": 40,\r\n    \"expiry_on\": 0,\r\n    \"max_uses\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/discounts/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"discounts",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Discount",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/discounts/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"discounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FAQ",
+			"item": [
+				{
+					"name": "Create FAQ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"Cegła waży kilogram i pół cegły. Ile waży cegła?\",\r\n    \"answer\": \"Cegła waży dwa kilogramy.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/faq/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"faq",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Question",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"Bociana dziobał szpak, a potem zaszła zmiana i szpak dziobał bociana. Następnie zaszły jeszcze trzy takie zmiany. Kto był więcej razy dziobany?\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/faq/add-question",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"faq",
+								"add-question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"answer\": \"Bocian był więcej razy dziobany\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/faq/add-answer/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"faq",
+								"add-answer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get FAQ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/faq/get/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"faq",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All FAQs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/faq/get-all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"faq",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Own FAQs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/faq/get-all/self",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"faq",
+								"get-all",
+								"self"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update FAQ",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"Co jest cięższe? Kilogram kamieni czy kilogram piór?\",\r\n    \"answer\": \"Ważą tyle samo\",\r\n    \"public\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/faq/update/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"faq",
+								"update",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish FAQ",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"Co jest cięższe? Kilogram kamieni czy kilogram piór?\",\r\n    \"answer\": \"Ważą tyle samo\",\r\n    \"public\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/faq/publish/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"faq",
+								"publish",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete FAQ",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/faq/delete/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"faq",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoices",
+			"item": [
+				{
+					"name": "Create Invoice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTEyMzc2MywianRpIjoiYjc2NjczMjItMzA5Zi00ZWViLTg4ODEtMjQ4MDU2YTZmZTA3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDExMjM3NjMsImNzcmYiOiIwMTVlMzNiNC0zNmM0LTQ5NzQtYmY0Mi02ZjQ4NmE5ZjM2N2IiLCJleHAiOjE3NDM3MTU3NjN9.WRFRHDtA38nPYdz_32OrsSPrylycVv9Un8FVthJsJps",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/invoices/create/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoices",
+								"create",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Invoice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/invoices/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoices",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Own Invoices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/invoices/self",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoices",
+								"self"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Invoices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/invoices/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"invoices",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notifications",
+			"item": [
+				{
+					"name": "AI",
+					"item": [
+						{
+							"name": "Generate AI Notification",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/notifications/ai/generate?car_id=",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"notifications",
+										"ai",
+										"generate"
+									],
+									"query": [
+										{
+											"key": "car_id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Points",
+			"item": [
+				{
+					"name": "Create Threshold",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"points_required\": 0,\r\n    \"discount_value\": 0,\r\n    \"description\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/points/thresholds/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"points",
+								"thresholds",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate Threshold",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/points/thresholds/1/deactivate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"points",
+								"thresholds",
+								"1",
+								"deactivate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exchange Points",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"threshold_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/points/exchange",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"points",
+								"exchange"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Thresholds",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/points/thresholds/get-all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"points",
+								"thresholds",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Points Balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/points/get/self",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"points",
+								"get",
+								"self"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Threshold",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/points/thresholds/1/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"points",
+								"thresholds",
+								"1",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ports",
+			"item": [
+				{
+					"name": "Create Port",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"max_power\": 100,\r\n    \"connector_type\": \"\",\r\n    \"status\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/stations/12/ports/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stations",
+								"12",
+								"ports",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Station Ports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/stations/12/ports?status=&connector_type=",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stations",
+								"12",
+								"ports"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": ""
+								},
+								{
+									"key": "connector_type",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Port",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ports/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ports",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Port",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"max_power\": 0,\r\n    \"connector_type\": \"\",\r\n    \"status\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ports/1/status",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ports",
+								"1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Port Status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ports/1/status",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ports",
+								"1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Port",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/ports/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ports",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "Transactions",
+					"item": [
+						{
+							"name": "Create Own Transactions Report",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"from_timestamp\": 0,\r\n    \"to_timestamp\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/reports/create/transactions/self",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"reports",
+										"create",
+										"transactions",
+										"self"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create All Transactions Report",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"from_timestamp\": 0,\r\n    \"to_timestamp\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/reports/create/transactions/all",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"reports",
+										"create",
+										"transactions",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transactions Report",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/reports/transactions/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"reports",
+										"transactions",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sessions",
+					"item": [
+						{
+							"name": "Create Own Sessions Report",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"from_timestamp\": 0,\r\n    \"to_timestamp\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/reports/create/sessions/self",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"reports",
+										"create",
+										"sessions",
+										"self"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create All Sessions Report",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"from_timestamp\": 0,\r\n    \"to_timestamp\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/reports/create/sessions/all",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"reports",
+										"create",
+										"sessions",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Sessions Report",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/reports/sessions/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"reports",
+										"sessions",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Own Reports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/reports/self",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reports",
+								"self"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Reports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/reports/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reports",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stations",
+			"item": [
+				{
+					"name": "Create Station",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"value": "{\"name\": \"Green Charge Station\", \"lat\": 34.052235, \"lng\": -118.243683, \"address\": \"456 Sunset Blvd, Los Angeles, CA\", \"opening_time\": \"15:00\", \"closing_time\": \"19:00\", \"price_per_kwh\": 0.35, \"status\": \"active\"}",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/stations/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stations",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Station",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/stations/get/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stations",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Stations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/stations/get-all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stations",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Station",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"opening_time\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/stations/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stations",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Station Status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/stations/1/status",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stations",
+								"1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Station Price",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pricePerKWh\": 0.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/stations/1/price",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stations",
+								"1",
+								"price"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Station",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/stations/delete/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stations",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"amount\": 0,\r\n    \"type\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/transactions/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"transactions",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Own Transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/transactions/self/get-all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"transactions",
+								"self",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/transactions/get-all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"transactions",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/transactions/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"transactions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Avatar",
+					"item": [
+						{
+							"name": "Upload Own Avatar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/users/avatar",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"avatar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Avatar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/users/avatar/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"avatar",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Own Avatar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/avatar/self",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"avatar",
+										"self"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Avatar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/avatar/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"avatar",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "Log in",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/auth",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Refresh Token",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{refresh_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTI4NjA1NywianRpIjoiNjUxNzFlOTMtMDZmNy00ZDI0LTlkMmQtODMwZGFiMGNhNjRiIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiIxIiwibmJmIjoxNzQxMjg2MDU3LCJjc3JmIjoiMGFjZWZkOWQtMTBjNS00NWZlLWFhZDQtMWQwYWJkM2I1ZDY5IiwiZXhwIjoxNzQzODc4MDU3fQ.GjO5TJjszAWWmrv1qaE54V3xDlq1Il3wN91T8Kx_gzk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/users/refresh",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Validate Token",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/validate-token",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"validate-token"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Password",
+					"item": [
+						{
+							"name": "Request Password Reset",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/request-reset",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"request-reset"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Confirm Password Reset",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"\",\r\n    \"code\": \"\",\r\n    \"new_password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/confirm-reset",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"confirm-reset"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change Password",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"old_password\": \"\",\r\n    \"new_password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/change-password?id=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"change-password"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Two Factor Authentication",
+					"item": [
+						{
+							"name": "Toggle 2FA",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"enable\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/two-factor",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"two-factor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify 2FA",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/two-factor/verify",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"two-factor",
+										"verify"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"\",\r\n  \"last_name\": \"\",\r\n  \"email\": \"\",\r\n  \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/get-all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/get/self",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"get",
+								"self"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/get/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users Login History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/login-history/get-all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"login-history",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Own Login History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/login-history",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"login-history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Login History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/login-history/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"login-history",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address_line1\": \"\",\r\n    \"city\": \"\",\r\n    \"postal_code\": \"\",\r\n    \"country\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/update/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Own User Data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone_number\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/update/self",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"update",
+								"self"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/delete/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "refresh_token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
